@@ -1,0 +1,7 @@
+node_modules
+target
+grunt-maven.json
+
+#idea-generated
+.idea
+*.iml
