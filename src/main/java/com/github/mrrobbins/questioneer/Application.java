@@ -1,4 +1,4 @@
-package com.github.mrrobbins.foundation;
+package com.github.mrrobbins.questioneer;
 
 import java.util.Arrays;
 

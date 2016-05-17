@@ -1,4 +1,4 @@
-package com.github.mrrobbins.foundation.hello;
+package com.github.mrrobbins.questioneer.hello;
 
 import javax.inject.Singleton;
 import javax.ws.rs.GET;

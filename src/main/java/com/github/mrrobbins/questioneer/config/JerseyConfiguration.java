@@ -1,6 +1,6 @@
-package com.github.mrrobbins.foundation.config;
+package com.github.mrrobbins.questioneer.config;
 
-import com.github.mrrobbins.foundation.hello.HelloResource;
+import com.github.mrrobbins.questioneer.hello.HelloResource;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
