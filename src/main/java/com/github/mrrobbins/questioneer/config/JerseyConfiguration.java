@@ -1,5 +1,6 @@
 package com.github.mrrobbins.questioneer.config;
 
+import com.github.mrrobbins.questioneer.QuestionResource;
 import com.github.mrrobbins.questioneer.hello.HelloResource;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.springframework.context.annotation.Bean;
@@ -13,7 +14,10 @@ public class JerseyConfiguration {
 
     @Bean
     public ResourceConfig resourceConfig() {
-        return new ResourceConfig().packages(HelloResource.class.getPackage().getName());
+        ResourceConfig resourceConfig = new ResourceConfig();
+         resourceConfig.register(HelloResource.class);
+         resourceConfig.register(QuestionResource.class);
+        return resourceConfig;
     }
 
 }
