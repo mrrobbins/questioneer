@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Routes, Router, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from '@angular/router';
+import {Location} from '@angular/common';
 import { SurveysComponent } from './+surveys';
 import { SurveyComponent } from './+survey';
 
@@ -16,8 +17,11 @@ import { SurveyComponent } from './+survey';
   {path: '/survey/:name', component: SurveyComponent}
 ])
 export class QuestioneerAppComponent implements OnInit{
-  constructor(private router: Router) {}
+  constructor(public router: Router, private location:Location) {}
   ngOnInit() {
     this.router.navigate(['/surveys']);
+  }
+  isActive(segment): boolean {
+    return this.location.path().endsWith(segment);
   }
 }
