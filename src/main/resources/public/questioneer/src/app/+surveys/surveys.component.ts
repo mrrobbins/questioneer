@@ -1,20 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Survey } from '../survey';
+import { SurveyService } from '../survey.service';
 
 @Component({
   moduleId: module.id,
   selector: 'app-surveys',
   templateUrl: 'surveys.component.html',
   styleUrls: ['surveys.component.css'],
-  directives: []
+  directives: [],
+  providers: [SurveyService]
 })
 export class SurveysComponent implements OnInit {
 
-  private surveys = surveys;
+  private surveys: Survey[];
 
-  constructor(private router:Router) {}
+  constructor(private router: Router, private surveyService: SurveyService) {}
 
   ngOnInit() {
+    this.surveys = this.surveyService.getSurveys();
   }
 
   navigateSurvey() {
@@ -22,18 +26,3 @@ export class SurveysComponent implements OnInit {
   }
 
 }
-
-interface Survey {
-  name: string,
-  author: string,
-  questions: string[]
-}
-
-const surveys:Survey[] = [{
-  name: 'Who We Are',
-  author: 'Matt Robbins',
-  questions: [
-    'What big events were happening in the world the year you were born? Who was president?',
-    'What are your three favorite childhood memories?'
-  ]
-}];
