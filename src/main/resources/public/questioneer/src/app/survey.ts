@@ -1,5 +1,5 @@
 export class Survey {
-  name: string;
+  title: string;
   author: string;
   description: string;
   questions: string[];
