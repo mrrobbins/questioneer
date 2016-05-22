@@ -2,6 +2,6 @@
 
 <ul>
   <li *ngFor="let survey of surveys">
-    <a href="javascript:void(0)" (click)="navigateSurvey()">{{survey.title}}</a>
+    <a href="javascript:void(0)" (click)="goSurvey(survey)">{{survey.title}}</a>
   </li>
 </ul>

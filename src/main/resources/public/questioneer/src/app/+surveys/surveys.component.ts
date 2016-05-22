@@ -18,11 +18,11 @@ export class SurveysComponent implements OnInit {
   constructor(private router: Router, private surveyService: SurveyService) {}
 
   ngOnInit() {
-    this.surveys = this.surveyService.getSurveys();
+    this.surveyService.getSurveys().then(surveys => this.surveys = surveys);
   }
 
-  navigateSurvey() {
-    this.router.navigate(['/survey', 'who-we-are']);
+  goSurvey(survey: Survey) {
+    this.router.navigate(['/survey', survey.id]);
   }
 
 }

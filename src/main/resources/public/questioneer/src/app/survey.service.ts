@@ -4,7 +4,10 @@ import { SURVEYS } from './mock-surveys';
 
 @Injectable()
 export class SurveyService {
-  getSurveys(): Survey[] {
-    return SURVEYS;
+  getSurveys(): Promise<Survey[]> {
+    return Promise.resolve(SURVEYS);
+  }
+  getSurvey(id: number): Promise<Survey> {
+    return Promise.resolve(SURVEYS[id-1]);
   }
 }

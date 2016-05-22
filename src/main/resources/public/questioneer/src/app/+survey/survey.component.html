@@ -1,5 +1,7 @@
-<h2>{{survey.title}}</h2>
-<p>{{survey.description}}</p>
+<div *ngIf="survey"> <!-- TODO: need better way to avoid undefined while waiting for survey promise -->
+  <h2>{{survey.title}}</h2>
+  <p>{{survey.description}}</p>
 
-<p>Created By: <strong>{{survey.author}}</strong></p>
-<p>Question count: {{survey.questions.length}}</p>
+  <p>Created By: <strong>{{survey.author}}</strong></p>
+  <p>Question count: {{survey.questions.length}}</p>
+</div>

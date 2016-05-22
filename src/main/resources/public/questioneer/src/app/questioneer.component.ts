@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Routes, Router, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from '@angular/router';
-import {Location} from '@angular/common';
+import { Location } from '@angular/common';
 import { SurveysComponent } from './+surveys';
 import { SurveyComponent } from './+survey';
 
@@ -14,7 +14,7 @@ import { SurveyComponent } from './+survey';
 })
 @Routes([
   {path: '/surveys', component: SurveysComponent},
-  {path: '/survey/:name', component: SurveyComponent}
+  {path: '/survey/:id', component: SurveyComponent}
 ])
 export class QuestioneerAppComponent implements OnInit{
   constructor(public router: Router, private location:Location) {}
