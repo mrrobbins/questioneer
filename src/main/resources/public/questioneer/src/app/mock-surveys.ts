@@ -13,7 +13,7 @@ export const SURVEYS: Survey[] = [{
     id: 2,
     title: 'Favorites',
     author: 'Adam Ant',
-    description: 'Tell you favorites.',
+    description: 'Tell some of your favorite things.',
     questions: [
       'What is your favoriate color?',
       'What is your favorite movie?',
