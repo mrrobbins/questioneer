@@ -6,8 +6,8 @@ import { SurveyService } from "../survey.service";
 @Component({
   moduleId: module.id,
   selector: 'app-survey',
-  templateUrl: 'survey.component.html',
-  styleUrls: ['survey.component.css'],
+  template: require('./survey.component.html'),
+  styleUrls: [require('./survey.component.css')],
   providers: [SurveyService]
 })
 export class SurveyComponent implements OnInit {

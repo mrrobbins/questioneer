@@ -6,8 +6,8 @@ import { SurveyService } from '../survey.service';
 @Component({
   moduleId: module.id,
   selector: 'app-surveys',
-  templateUrl: 'surveys.component.html',
-  styleUrls: ['surveys.component.css'],
+  template: require('./surveys.component.html'),
+  styles: [require('./surveys.component.css')],
   directives: [],
   providers: [SurveyService]
 })

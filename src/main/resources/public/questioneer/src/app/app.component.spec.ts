@@ -5,13 +5,13 @@ import {
   it,
   inject
 } from '@angular/core/testing';
-import { QuestioneerAppComponent } from '../app/questioneer.component';
+import { AppComponent } from '../app/app.component';
 
-beforeEachProviders(() => [QuestioneerAppComponent]);
+beforeEachProviders(() => [AppComponent]);
 
 describe('App: Questioneer', () => {
   it('should create the app',
-      inject([QuestioneerAppComponent], (app: QuestioneerAppComponent) => {
+      inject([AppComponent], (app: AppComponent) => {
     expect(app).toBeTruthy();
   }));
 });

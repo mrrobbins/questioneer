@@ -7,8 +7,8 @@ import { SurveyComponent } from './+survey';
 @Component({
   moduleId: module.id,
   selector: 'questioneer-app',
-  templateUrl: 'questioneer.component.html',
-  styleUrls: ['questioneer.component.css'],
+  template: require('./app.component.html'),
+  styles: [require('./app.component.css')],
   directives: [ROUTER_DIRECTIVES],
   providers: [ROUTER_PROVIDERS]
 })
@@ -16,7 +16,7 @@ import { SurveyComponent } from './+survey';
   {path: '/surveys', component: SurveysComponent},
   {path: '/survey/:id', component: SurveyComponent}
 ])
-export class QuestioneerAppComponent implements OnInit{
+export class AppComponent implements OnInit{
   constructor(public router: Router, private location:Location) {}
   ngOnInit() {
     this.router.navigate(['/surveys']);
